@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ .p{
+    background: linear-gradient(to right,#000000,#eb04eb,#9722f6) ;
+}
+.p:hover{
+        transform: 2s;
+        background: linear-gradient(to left,#0a5e6e,#828fdd,#30228e) ;
+    }
+</style>
+<body>
+    <center> <div class="p" style="height: 500px;width: 500px;border: none solid;border-radius: 20px;color: white;"><br><br><br><br>
+      <h1>---Speed and Time Calculation:---</h1>
+        <h2>Enter the distance travelled in meters::</h2>
+        <input type="text" id="s1">
+        <h2>Enter the time taken in seconds:</h2>
+        <input type="text" id="s2">
+
+
+        <h2 id="ans"></h2></div>
+    </center>
+</body>
+</html>
+<script>
+
+    var meters=document.getElementById("s1").value
+    var seconds=document.getElementById("s2").value
+
+    var speed = +meters / +seconds
+
+
+    document.getElementById("ans").innerHTML=speed
+</script>

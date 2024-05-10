@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .p{
+    background: linear-gradient(to right,#0a5e6e,#828fdd,#30228e) ;
+}
+.p:hover{
+        transform: 2s;
+        background: linear-gradient(to left,#0a5e6e,#828fdd,#30228e) ;
+    }
+</style>
+<body>
+    <center> <div class="p" style="height: 500px;width: 500px;border: none solid;border-radius: 20px;"><br><br><br><br>
+      <h1>--calculates the Body Mass Index (BMI):--</h1>
+        <h2>Enter a weight:</h2>
+        <input type="text" id="s1">
+        <h2>Enter a height:</h2>
+        <input type="text" id="s2">
+
+
+        <h2 id="ans"></h2></div>
+    </center>
+</body>
+</html>
+<script>
+
+    var height=document.getElementById("s2").value
+    var weight=document.getElementById("s1").value
+
+
+    var Bmi = +weight / (+height * +height)
+
+
+    document.getElementById("ans").innerHTML=Bmi
+</script>

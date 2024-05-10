@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .p {
+      background: linear-gradient(to right, #8ed6e5, #828fdd);
+    }
+    .p:hover {
+      transform: 2s;
+      background: linear-gradient(to left, #f00101, #35f704);
+      color: white;
+    }
+  </style>
+  <body>
+    <center>
+      <div
+        class="p"
+        style="
+          height: 500px;
+          width: 500px;
+          border: none solid;
+          border-radius: 20px;
+        "
+      >
+        <br /><br /><br /><br />
+        <h1>-----Grading System-----</h1>
+        <h2>Enter score:</h2>
+        <input type="text" id="s1" />
+        <h1 id="ans"></h1>
+      </div>
+    </center>
+  </body>
+</html>
+<script>
+  let score = document.getElementById("s1").value;
+
+  if (score === "") {
+    document.getElementById("ans").innerHTML = "enter score!";
+  } else {
+    if (score >= 90 && score <= 100) {
+      document.getElementById("ans").innerHTML = "A";
+    } 
+    else if (score >= 81 && score <= 89) {
+      document.getElementById("ans").innerHTML = "B";
+    }
+    else if (score >= 71 && score <= 79) {
+      document.getElementById("ans").innerHTML = "C";
+    }
+    else if (score >= 61 && score <= 69) {
+      document.getElementById("ans").innerHTML = "D";
+    }
+    else{
+        document.getElementById("ans").innerHTML = "F";
+    }
+  }
+</script>

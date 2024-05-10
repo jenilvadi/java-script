@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.p{
+    background: linear-gradient(to right,#8ed6e5,#828fdd) ;
+}
+.p:hover{
+        transform: 2s;
+        background: linear-gradient(to left,#8ed6e5,#828fdd) ;
+    }
+</style>
+<body>
+    <center> <div class="p" style="height: 500px;width: 500px;border: none solid;border-radius: 20px; color: black;"><br><br><br><br>
+      <h1>-----Calculate Regular Salary:-----</h1>
+        <h2>Enter a product price:</h2>
+        <input type="text" id="s1">
+        <h2>Enter a product quantity:</h2>
+        <input type="text" id="s2">
+
+
+        <h2 id="ans"></h2></div>
+    </center>
+</body>
+</html>
+<script>
+
+    var price=document.getElementById("s1").value
+    var quantity=document.getElementById("s2").value
+
+    var totalCost = +price * +quantity
+
+
+    document.getElementById("ans").innerHTML=totalCost
+</script>
