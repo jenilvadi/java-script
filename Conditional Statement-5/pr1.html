@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .a{
+        background: linear-gradient(to right,#8ed6e5,#828fdd);
+    }
+</style>
+<body>
+    
+   <center> <div class="a" style="height: 300px; width: 300px; border-radius: 20px;">
+    <h1>choose a day</h1>
+  <hr> <br><br><br>
+    <Select name="" id="day" style="height: 30px; width: 180px;">
+        <option value="Sunday">Sunday</option>
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thurseday">Thurseday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+
+
+    </Select>
+    <br><br><br>
+    <hr>
+    <h1  id="ans"></h1>
+</div>
+</center>
+
+    
+</body>
+</html>
+<Script>
+   let a = document.getElementById("day").value 
+
+   switch (a){
+        case "Sunday":
+        document.getElementById("ans").innerHTML = "It's weekend."
+        break
+        case "Monday":
+        document.getElementById("ans").innerHTML = "It's start of  workweek."
+        break
+        case "Tuesday":
+        document.getElementById("ans").innerHTML = "It's some other day."
+        break
+        case "Wednesday":
+        document.getElementById("ans").innerHTML = "It's some other day."
+        break
+        case "Thurseday":
+        document.getElementById("ans").innerHTML = "It's some other day."
+        break
+        case "Friday":
+        document.getElementById("ans").innerHTML = "It's almost the weekend."
+        break
+        case "Saturday":
+        document.getElementById("ans").innerHTML = "It's some other day."
+        break
+   
+   }
+
+
+</Script>

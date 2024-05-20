@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="p1">
+    <h1 id="ans"></h1>
+</body>
+</html>
+<script>
+    let a=document.getElementById("p1").value 
+
+    for(let b = 1 ; b<= a ; b++)
+    {
+        if (b%3===0 && b%5===0){
+            console.log("FizzBuzz")
+            document.getElementById("ans").innerHTML += "fizzBuzz"+"<br>"
+          
+        }
+        
+        else if (b%5===0) {
+            console.log("Buzz")
+            document.getElementById("ans").innerHTML += "Buzz" +"<br>"
+           
+        }
+        else if (b%3===0) {
+            console.log("Fizz")
+            document.getElementById("ans").innerHTML += "fizz" +"<br>"
+           
+            
+        } 
+        else{
+            console.log(b)
+            document.getElementById("ans").innerHTML += b +"<br>"
+        }
+    }
+</script>

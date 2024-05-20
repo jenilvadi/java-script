@@ -1,0 +1,51 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            
+        </style>
+    </head>
+
+    <body>
+        
+    <center> <div  style="height: 300px; width: 300px; border-radius: 20px; background: linear-gradient(to right,#8ed6e5,#828fdd);">
+        <h1>choose a Color</h1>
+    <hr> <br><br><br>
+        <Select name="" id="day" style="height: 30px; width: 180px;">
+            <option value="red">Red</option>
+            <option value="yellow">Yellow</option>
+            <option value="green">Green</option>
+        
+
+        </Select>
+        <br><br><br>
+        <hr>
+        <h1  id="ans"></h1>
+    </div>
+    </center>
+
+        
+    </body>
+    </html>
+    <Script>
+    let a = document.getElementById("day").value 
+
+    switch (a){
+            case "red":
+            document.getElementById("ans").innerHTML = "Stop!"
+            break
+            case "yellow":
+            document.getElementById("ans").innerHTML = "Slow down!"
+            break
+            case "green":
+            document.getElementById("ans").innerHTML = "Go"
+            break
+            
+    
+    }
+
+
+    </Script>
