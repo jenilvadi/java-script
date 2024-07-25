@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+
+    img {
+        width: 100%;
+        height: 99vh;
+        display: none;
+        animation: slide 5s linear;
+        
+    }
+
+    .slider {
+        width: 100%;
+        height: 99vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+    }
+
+    @keyframes slide {
+        25% {
+            width: 50%;
+            height: 50%;
+            transform: skewX(20deg);
+
+        }
+
+        50% {
+            width: 100%;
+            height: 100%;
+            transform: skewY(0deg);
+
+        }
+
+    }
+
+    h1 {
+
+        font-size: 100px;
+        color: white;
+    }
+</style>
+
+<body>
+    <center>
+        <h1><span class="s1">11</span>
+            :<span class="s2">59</span>
+            :<span class="s3">00</span>
+        </h1>
+        <div class="slider">
+
+            <img src="https://img.jagranjosh.com/images/2023/July/2872023/world-nature.jpg"
+                alt="" class="img1">
+            <img src="https://st.adda247.com/https://currentaffairs.adda247.com/wp-content/uploads/multisite/sites/5/2020/07/11133847/world-nature-conservation-day-5f02e0247df6e-1594023972.jpg"
+                alt="" class="img2">
+            <img src="https://i0.wp.com/90rollsroyces.com/wp-content/uploads/2020/07/World-Nature-Conservation-Day-Lovesove.jpg?fit=800%2C800&ssl=1"
+                alt="" class="img3">
+
+
+        </div>
+    </center>
+
+
+</body>
+
+</html>
+<script>
+    
+    let s1=11
+
+    document.querySelector(".s1").innerHTML = s1
+  
+    let stop = setInterval(()=>{
+  
+      s1++
+  
+      if(s1 === 12){
+  clearInterval(stop)
+  document.querySelector(".s1").innerHTML = s1
+      }
+    },10000)
+  
+    let s2=59
+  document.querySelector(".s2").innerHTML = s2
+  
+    let stop2 = setInterval(()=>{
+  
+      s2++
+  
+      if(s2 === 60){
+  clearInterval(stop2)
+  document.querySelector(".s2").innerHTML = 0+"0"
+  
+      }
+    },10000)
+  
+  
+    let s3 = 50
+  document.querySelector(".s3").innerHTML = s3
+  
+    let stop3= setInterval(()=>{
+      s3++
+      document.querySelector(".s3").innerHTML = s3
+  
+    if(s3===60){
+      clearInterval(stop3)
+      document.querySelector(".s3").innerHTML = 0+"0"
+      document.querySelector("img").style.display="block"
+    }
+  
+    },1000)
+
+   
+ 
+
+    let slider = document.querySelectorAll("img")
+    let index = 0
+    setTimeout(doSomething, 9500);
+    function doSomething() {
+    
+    function slid(index) {
+        
+        for (let i = 0; i < slider.length; i++) {
+            slider[i].style.display = "none"
+            document.querySelectorAll("img").style
+
+        }
+        slider[index].style.display = "block"
+
+    }
+
+    function show() {
+        setInterval(() => {
+            slid(index)
+            index++
+            if (index == slider.length) {
+                index = 0
+
+            }
+        }, 1000)
+    }
+    show()
+}
+</script>
